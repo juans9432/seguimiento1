@@ -1,16 +1,26 @@
 import java.time.LocalDateTime;
 
 public class RegistroTransaccion {
+    public String id;
     public LocalDateTime fecha;
     public double valor;
     public String titular;
-    public String categoria;
+    public Categoria categoria;
 
-    public RegistroTransaccion(LocalDateTime fecha, double valor, String titular, String categoria) {
+    public RegistroTransaccion(String id, LocalDateTime fecha, double valor, String titular, Categoria categoria) {
+        this.id = id;
         this.fecha = fecha;
-        this.valor=valor;
-        this.titular=titular;
-        this.categoria=categoria;
+        this.valor = valor;
+        this.titular = titular;
+        this.categoria = categoria;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public LocalDateTime getFecha() {
@@ -37,11 +47,11 @@ public class RegistroTransaccion {
         this.titular = titular;
     }
 
-    public String getCategoria() {
+    public Categoria getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
+    public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
 }

@@ -1,23 +1,24 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class BilleteraVirtual {
-    public String id;
+    public String numero;
     public double saldo;
+    public double COSTO=200;
     public ArrayList<RegistroTransaccion> registroTransacciones;
 
-    public BilleteraVirtual(String id, double saldo, ArrayList<RegistroTransaccion> registroTransacciones) {
-        this.id = id;
+    public BilleteraVirtual(String numero, double saldo, double COSTO, ArrayList<RegistroTransaccion> registroTransacciones) {
+        this.numero = numero;
         this.saldo = saldo;
+        this.COSTO = COSTO;
         this.registroTransacciones = registroTransacciones;
     }
 
-    public String getId() {
-        return id;
+    public String getNumero() {
+        return numero;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
     public double getSaldo() {
@@ -26,6 +27,14 @@ public class BilleteraVirtual {
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
+    }
+
+    public double getCOSTO() {
+        return COSTO;
+    }
+
+    public void setCOSTO(double COSTO) {
+        this.COSTO = COSTO;
     }
 
     public ArrayList<RegistroTransaccion> getRegistroTransacciones() {
