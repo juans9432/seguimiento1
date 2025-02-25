@@ -3,14 +3,14 @@ import java.time.LocalDateTime;
 public class RegistroTransaccion {
     public String id;
     public LocalDateTime fecha;
-    public double valor;
+    public double monto;
     public String titular;
     public Categoria categoria;
 
-    public RegistroTransaccion(String id, LocalDateTime fecha, double valor, String titular, Categoria categoria) {
+    public RegistroTransaccion(String id, LocalDateTime fecha, double monto, String titular, Categoria categoria) {
         this.id = id;
         this.fecha = fecha;
-        this.valor = valor;
+        this.monto = monto;
         this.titular = titular;
         this.categoria = categoria;
     }
@@ -31,12 +31,12 @@ public class RegistroTransaccion {
         this.fecha = fecha;
     }
 
-    public double getValor() {
-        return valor;
+    public double getMonto() {
+        return monto;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public void setMonto(double monto) {
+        this.monto = monto;
     }
 
     public String getTitular() {
